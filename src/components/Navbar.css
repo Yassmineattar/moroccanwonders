@@ -1,18 +1,71 @@
+/* Navbar container styles */
 .navbar {
-    background-color: #004080; /* Bleu foncé */
-  }
-  
-  .navbar-brand {
-    color: #fff;
-    font-size: 1.5rem;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #fff;
-    margin-right: 15px;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #ffcc00; /* Jaune pour le survol */
-  }
-  
+  background-color: transparent; /* Transparent background */
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 20px;
+}
+
+/* Navbar brand (logo/text) */
+.navbar-brand {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Links styles */
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1rem;
+  margin: 0 10px;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00;
+}
+
+/* Icons styles */
+.navbar-nav .icon {
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .icon:hover {
+  color: #ffcc00;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+/* Responsive navbar */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Adjust spacing for alignment */
+.ms-auto {
+  margin-left: auto;
+}
