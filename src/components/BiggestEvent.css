@@ -1,0 +1,89 @@
+.biggest-event {
+    display: flex;
+    align-items: center; /* Aligner verticalement le contenu */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    height: 700px; /* Hauteur de l'écran */
+    background-image: url('https://fr.aldar.ma/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-30-at-11.15.30.jpeg'); /* Remplacez par l'image correcte */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left; /* Texte aligné à gauche */
+    padding: 20px; 
+    position: relative;
+  }
+  
+  .content {
+    max-width: 1500px;
+    z-index: 2;
+  }
+  
+  .title {
+    font-size: 2.8rem; /* Taille du titre */
+    font-weight: bold;
+    margin-bottom: 20px; 
+    padding-bottom: 50px;
+  }
+  
+  .description {
+    font-size: 1.2rem; /* Taille de la description */
+    line-height: 1.6;
+    margin-bottom: 30px; 
+    padding-bottom: 50px;
+
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 18px 55px; /* Taille des boutons */
+    border-radius: 5px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .primary-btn {
+    background-color: #d4a72c; 
+    color: rgb(255, 255, 255);
+    border: none;
+  }
+  
+  .primary-btn:hover {
+    background-color: #b58f23; /* Couleur dorée plus sombre */
+    transform: scale(1.05); /* Agrandissement au survol */
+  }
+  
+  .secondary-btn {
+    background-color: #d4a72c;
+    color: #ffffff;
+    border: 2px solid #d4a72c;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #d4a72c;
+    color: white; /* Texte blanc */
+    transform: scale(1.05);
+  }
+  
+  /* Overlay sombre pour une meilleure lisibilité */
+  .biggest-event::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Couche sombre */
+    z-index: 1;
+  }
+  
