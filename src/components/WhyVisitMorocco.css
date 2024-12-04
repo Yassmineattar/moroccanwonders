@@ -1,0 +1,117 @@
+.why-visit-morocco {
+    display: flex;
+    justify-content: space-between; /* Espacement équilibré entre le texte et les images */
+    align-items: center;
+    padding: 50px 5%; /* Réduire les espaces blancs avec 5% de marge à gauche et à droite */
+    background-color: #fff;
+    height: 700px;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1800px;
+    width: 100%;
+    gap: 30px; /* Espacement entre le texte et les images */
+  }
+  
+  /* Texte à gauche */
+  .text-content {
+    flex: 1;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8C431D;
+    margin-bottom: 20px;
+  }
+  
+  .section-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .benefits-list li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Galerie d'images */
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gallery-container {
+    position: relative;
+    display: flex;
+    gap: -50px; /* Chevauchement des images */
+  }
+  
+  .gallery-image {
+    position: relative;
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, z-index 0.5s ease;
+    cursor: pointer;
+  }
+  
+  /* Image active */
+  .gallery-image.active {
+    transform: scale(1.15); /* Agrandir légèrement l'image active */
+    z-index: 2;
+  }
+  
+  /* Images en arrière-plan */
+  .gallery-image.behind {
+    transform: scale(0.9); /* Réduire légèrement les images derrière */
+    filter: brightness(0.8);
+    z-index: 1;
+  }
+  
+  /* Effet au survol */
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsivité */
+  @media (max-width: 1024px) {
+    .why-visit-morocco {
+      flex-direction: column; /* Empilement vertical sur écrans étroits */
+      align-items: center; /* Centrer les éléments */
+      padding: 50px 20px; /* Augmenter un peu le padding latéral */
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+  
+    .text-content {
+      margin-bottom: 30px;
+    }
+  
+    .gallery-container {
+      gap: -30px; /* Réduire le chevauchement */
+    }
+  
+    .gallery-image {
+      height: 300px;
+      width: 200px;
+    }
+  }
+  
