@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 import WhyVisitMorocco from "./components/WhyVisitMorocco"
 import BiggestEvent from "./components/BiggestEvent"
-
+import Swiper from "./components/Swiper";
 function App() {
   return (
     <Router>
@@ -12,6 +12,8 @@ function App() {
       <Carousel />
       <WhyVisitMorocco />
       <BiggestEvent />
+      
+      <Swiper/>
 
     </Router>
   );
