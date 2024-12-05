@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "./styles.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Données pour les deux groupes de carrousels
 const data = [
   {
     category: "Touristic Cities",
@@ -59,7 +58,8 @@ const data = [
 const App = () => {
   return (
     <div>
-      {/* Premier groupe de slides */}
+      <h1 className="destTitle">Choose Your Next Destination</h1>
+     
       <div className="grid-container">
         {data.map((carousel, index) => (
           <div className="carousel-card" key={index}>
@@ -80,12 +80,12 @@ const App = () => {
                     </div>
                     {/* Image */}
                     <img src={item.image} alt={item.title} className="slide-image" />
-                    {/* Texte descriptif */}
+                   
                     <div className="slide-description">
                       <h3>{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
-                    {/* Bouton Discover More */}
+                    
                     <button className="discover-btn">Discover More</button>
                   </div>
                 </SwiperSlide>
@@ -110,18 +110,18 @@ const App = () => {
               {carousel.items.map((item, idx) => (
                 <SwiperSlide key={idx + data.length}>
                   <div className="slide-content">
-                    {/* Icône de cœur */}
+                   
                     <div className="favorite-icon">
                       <i className="fas fa-heart"></i>
                     </div>
                     {/* Image */}
                     <img src={item.image} alt={item.title} className="slide-image" />
-                    {/* Texte descriptif */}
+                    
                     <div className="slide-description">
                       <h3>{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
-                    {/* Bouton Discover More */}
+                    
                     <button className="discover-btn">Discover More</button>
                   </div>
                 </SwiperSlide>

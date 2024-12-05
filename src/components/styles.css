@@ -1,4 +1,11 @@
 /* Conteneur principal */
+.destTitle{
+    color: #0136a4;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2em;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
