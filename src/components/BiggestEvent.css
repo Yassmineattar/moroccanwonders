@@ -2,20 +2,26 @@
     display: flex;
     align-items: center; /* Aligner verticalement le contenu */
     justify-content: center; /* Centrer le contenu horizontalement */
-    height: 700px; /* Hauteur de l'écran */
-    background-image: url('https://fr.aldar.ma/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-30-at-11.15.30.jpeg'); /* Remplacez par l'image correcte */
+    height: 550px; /* Hauteur de l'écran */
+    background-image: url('/public/images/worldcup.png'); /* Remplacez par l'image correcte */
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     color: white;
-    text-align: left; /* Texte aligné à gauche */
-    padding: 20px; 
+    text-align: left;
+    padding-bottom: 30px; 
     position: relative;
   }
   
+  .description{
+    color: whitesmoke;
+    padding: 20px;
+    padding-left: 30px;
+  }
   .content {
     max-width: 1500px;
     z-index: 2;
+    align-items: left;
+
   }
   
   .title {
@@ -23,6 +29,7 @@
     font-weight: bold;
     margin-bottom: 20px; 
     padding-bottom: 50px;
+    text-align: center;
   }
   
   .description {
@@ -83,7 +90,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Couche sombre */
+    background: rgba(0, 0, 0, 0.3); /* Couche sombre */
     z-index: 1;
   }
   

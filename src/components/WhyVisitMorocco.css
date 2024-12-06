@@ -2,16 +2,16 @@
     display: flex;
     justify-content: space-between; /* Espacement équilibré entre le texte et les images */
     align-items: center;
-    padding: 50px 5%; /* Réduire les espaces blancs avec 5% de marge à gauche et à droite */
+    padding: 30px; /* Réduire les espaces blancs avec 5% de marge à gauche et à droite */
     background-color: #fff;
-    height: 700px;
+    height: 600px;
   }
   
   .container {
     display: flex;
     max-width: 1800px;
     width: 100%;
-    gap: 30px; /* Espacement entre le texte et les images */
+    gap: 20px; /* Espacement entre le texte et les images */
   }
   
   /* Texte à gauche */
@@ -32,20 +32,7 @@
     margin-bottom: 20px;
     line-height: 1.8;
   }
-  
-  .benefits-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .benefits-list li {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  
+
   /* Galerie d'images */
   .image-content {
     flex: 1;
@@ -57,15 +44,16 @@
   .gallery-container {
     position: relative;
     display: flex;
-    gap: -50px; /* Chevauchement des images */
+    gap: 0px;
+    right: -50px;
   }
   
   .gallery-image {
     position: relative;
-    height: 400px;
-    width: 250px;
+    height: 360px;
+    width: 190px;
     object-fit: cover;
-    border-radius: 20px; /* Coins arrondis */
+    border-radius: 95px; /* Coins arrondis */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.5s ease, z-index 0.5s ease;
     cursor: pointer;
@@ -73,20 +61,22 @@
   
   /* Image active */
   .gallery-image.active {
-    transform: scale(1.15); /* Agrandir légèrement l'image active */
+    transform: scale(1.3); /* Agrandir légèrement l'image active */
     z-index: 2;
   }
   
   /* Images en arrière-plan */
   .gallery-image.behind {
-    transform: scale(0.9); /* Réduire légèrement les images derrière */
-    filter: brightness(0.8);
+    transform: scale(1); /* Réduire légèrement les images derrière */
+    filter: brightness(0.7);
     z-index: 1;
   }
   
   /* Effet au survol */
   .gallery-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    filter: brightness(1);
+    
   }
   
   /* Responsivité */

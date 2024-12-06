@@ -4,9 +4,9 @@ import './WhyVisitMorocco.css';
 const WhyVisitMorocco = () => {
   // Liste des images
   const images = [
-    { src: '/images/why1.jpg', alt: 'City View' },
+    { src: '/images/why3.png', alt: 'City View' },
     { src: '/images/why1.jpg', alt: 'Hot Air Balloon' },
-    { src: '/images/why1.jpg', alt: 'Coastal View' },
+    { src: '/images/why2.png', alt: 'Coastal View' },
   ];
 
   // État pour l'image active
@@ -25,15 +25,11 @@ const WhyVisitMorocco = () => {
           <h2 className="section-title">Why Visit Morocco?</h2>
           <p className="section-description">
             Morocco is a superb holiday destination that offers everything for everyone, including beaches and coves, modern and historic towns, deserts, and mountains.
-          </p>
-          <ul className="benefits-list">
-            <li>
+          
               You can travel to more isolated locations to enjoy wilderness and seclusion or visit well-preserved historic cities that transport you back in time.
-            </li>
-            <li>
+            
               Morocco's diverse landscapes range from serene beaches to the majestic Atlas Mountains and vast Sahara Desert.
-            </li>
-          </ul>
+            </p>
         </div>
 
         {/* Galerie d'images à droite */}
