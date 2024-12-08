@@ -1,0 +1,22 @@
+/* Conteneur principal de la section */
+.destination-section {
+    padding: 2rem; /* Espacement autour de la section */
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    text-align: center; /* Aligner le texte au centre */
+  }
+  
+  .destination-section h2 {
+    font-size: 2rem;
+    color: #A5561B; /* Couleur du titre principal */
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  /* Conteneur des catégories */
+  .categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 2rem; /* Espacement entre les catégories */
+    justify-content: center;
+  }
+  

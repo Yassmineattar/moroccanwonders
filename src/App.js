@@ -1,19 +1,37 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
-import WhyVisitMorocco from "./components/WhyVisitMorocco"
-import BiggestEvent from "./components/BiggestEvent"
-import Swiper from "./components/Swiper";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Destinations from "./components/Destinations/Destinations";
+import CAN2025 from "./components/CAN2025/CAN2025";
+import Store from "./components/Store/Store";
+import Plan from "./components/Plan/Plan";
+import Home from "./components/landing_page/Home";
+import Favorites from "./components/Favorites/Favorites";
+import Profile from "./components/Profile/Profile";
+
+
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Carousel />
-      <WhyVisitMorocco />
-      <BiggestEvent />
+    <Router >
       
-      <Swiper/>
+      
+      
+
+      
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/can2025" element={<CAN2025 />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/plan/*" element={<Plan />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    
+
+
+
 
     </Router>
   );
