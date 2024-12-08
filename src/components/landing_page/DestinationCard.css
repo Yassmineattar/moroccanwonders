@@ -1,0 +1,85 @@
+/* Style principal pour la carte */
+.destination-card {
+    background-color: #fff; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Organisation verticale */
+    transition: transform 0.3s, box-shadow 0.3s; /* Effet au survol */
+  }
+  
+  .destination-card:hover {
+    transform: translateY(-5px); /* Soulèvement au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre renforcée */
+  }
+  
+  /* Image */
+  .card-image img {
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    height: 180px; /* Hauteur fixe */
+    object-fit: cover; /* Coupe l'image si nécessaire pour conserver le ratio */
+  }
+  
+  /* Contenu de la carte */
+  .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Prend toute la hauteur disponible */
+  }
+  
+  /* Titre de la carte */
+  .card-content h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Description de la carte */
+  .card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Remplit l'espace entre le titre et les actions */
+  }
+  
+  /* Actions (boutons en bas) */
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Bouton "favori" */
+  .favorite-btn {
+    font-size: 1.5rem;
+    color: #A5561B; /* Couleur principale */
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: color 0.3s ease;
+  }
+  
+  .favorite-btn:hover {
+    color: #f54242; /* Couleur rouge au survol */
+  }
+  
+  /* Bouton "Discover More" */
+  .discover-btn {
+    background-color: #A5561B;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discover-btn:hover {
+    background-color: #833d14; /* Couleur plus foncée au survol */
+  }
+  
