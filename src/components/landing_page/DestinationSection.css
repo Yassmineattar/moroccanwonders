@@ -1,22 +1,144 @@
-/* Conteneur principal de la section */
-.destination-section {
-    padding: 2rem; /* Espacement autour de la section */
-    background-color: #f9f9f9; /* Couleur de fond claire */
-    text-align: center; /* Aligner le texte au centre */
-  }
+/* Conteneur principal */
+.destTitle{
+  color: #0136a4;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 2em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Carte de chaque carrousel */
+.carousel-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Titre du carrousel */
+.carousel-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Contenu des slides */
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+p {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Conteneur de la slide */
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  overflow: hidden;
+  background: #fff; /* Fond blanc du conteneur */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Icône de cœur */
+.favorite-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 20px;
+  color: #ffffff; /* Rouge pour le cœur */
   
-  .destination-section h2 {
-    font-size: 2rem;
-    color: #A5561B; /* Couleur du titre principal */
-    font-weight: bold;
-    margin-bottom: 2rem;
-  }
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.favorite-icon:hover {
+  color: #ff6b6b; /* Rouge plus clair au survol */
+}
+
+/* Description de la slide */
+.slide-description {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.slide-description h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.slide-description p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Bouton Discover More */
+.discover-btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #0136a4;
+  background-color: #fff; 
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 16px; 
+  position: relative; 
+  border: 2px solid #0136a4;
   
-  /* Conteneur des catégories */
-  .categories-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
-    gap: 2rem; /* Espacement entre les catégories */
-    justify-content: center;
-  }
-  
+}
+
+.discover-btn:hover {
+  background-color: #0136a4; 
+  color:#fff
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+position: absolute; /* Positionner les flèches par rapport à leur conteneur */
+top: 40%; /* Décaler verticalement les flèches (ajustez la valeur) */
+transform: translateY(-50%); /* Centrer verticalement */
+color: #0136a4; /* Couleur des flèches */
+z-index: 10; /* S'assurer que les flèches sont au-dessus des slides */
+}
+
+.swiper-button-prev {
+left: 10px; /* Ajustez la position horizontale de la flèche gauche */
+}
+
+.swiper-button-next {
+right: 10px; /* Ajustez la position horizontale de la flèche droite */
+}
+
+
