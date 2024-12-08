@@ -1,35 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CategorySlider from "./CategorySlider";
 import "./DestinationSection.css";
 
 const DestinationSection = () => {
-  const [categories, setCategories] = useState([]); // Stockage des catégories
-  const [loading, setLoading] = useState(true); // État de chargement
-
-  // Fonction pour récupérer les données depuis l'API
-  const fetchCategories = async () => {
-    try {
-      const response = await fetch("http://localhost:5000/api/categories"); // URL de votre API
-      const data = await response.json();
-
-      // Transformer les données si nécessaire
-      setCategories(data);
-    } catch (error) {
-      console.error("Erreur lors de la récupération des données :", error);
-    } finally {
-      setLoading(false); // Arrêter l'état de chargement
-    }
-  };
-
-  // Appeler l'API lorsque le composant est monté
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  // Afficher un message de chargement si les données ne sont pas encore prêtes
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  const categories = [
+    { title: "Touristic Cities", destinations: ["CFC Tower Casablanca"] },
+    { title: "Natural Spots", destinations: ["Akchour Waterfalls"] },
+    { title: "Historical Spots", destinations: ["Université Al Quaraouiyine"] },
+    { title: "Sahara", destinations: ["Merzouga Desert"] },
+    { title: "Souks", destinations: ["Place Jamaa El Fna"] },
+    { title: "Artistical Spots", destinations: ["Blue city Tetouan"] },
+  ];
 
   return (
     <div className="destination-section">

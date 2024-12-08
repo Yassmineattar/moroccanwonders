@@ -13,7 +13,7 @@ const BiggestEvent = () => {
           As a nation with a deep passion for the sport, Morocco promises a world-class tournament.
         </p>
         <div className="buttons">
-          <button className="btn primary-btn">View More</button>
+          <button className="btn primary-btn" to="/can2025">View More</button>
           <button className="btn secondary-btn">Discover Stadiums</button>
         </div>
       </div>

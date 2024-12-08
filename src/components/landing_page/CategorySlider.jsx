@@ -8,7 +8,7 @@ const CategorySlider = ({ title, destinations }) => {
       <h3>{title}</h3>
       <div className="slider">
         {destinations.map((destination, index) => (
-          <DestinationCard key={index} title={destination.title} />
+          <DestinationCard key={index} title={destination} />
         ))}
       </div>
     </div>

@@ -1,50 +1,35 @@
-import React, { useState, useEffect } from "react";
-import CategorySlider from "./CategorySlider";
-import "./DestinationSection.css";
+import React, { useState } from "react";
+import "./DestinationCard.css";
 
-const DestinationSection = () => {
-  const [categories, setCategories] = useState([]); // État pour stocker les catégories
-  const [loading, setLoading] = useState(true); // État pour le chargement
+const DestinationCard = ({ title }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
 
-  // Fonction pour récupérer les données depuis l'API
-  const fetchCategories = async () => {
-    try {
-      const response = await fetch("http://localhost:5000/api/categories"); // Remplacez par l'URL de votre API
-      const data = await response.json();
-
-      // Stocker les données des catégories
-      setCategories(data);
-    } catch (error) {
-      console.error("Erreur lors de la récupération des données :", error);
-    } finally {
-      setLoading(false);
-    }
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
   };
 
-  // Appeler fetchCategories lors du montage du composant
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  // Afficher un message de chargement si les données ne sont pas encore prêtes
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   return (
-    <div className="destination-section">
-      <h2>Choose Your Next Destination</h2>
-      <div className="categories-container">
-        {categories.map((category, index) => (
-          <CategorySlider
-            key={index}
-            title={category.title}
-            destinations={category.destinations}
-          />
-        ))}
+    <div className="destination-card">
+      <div className="card-image">
+        <img
+          src={`https://via.placeholder.com/300x200?text=${title}`}
+          alt={title}
+        />
+      </div>
+      <div className="card-content">
+        <h4>{title}</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam.
+        </p>
+        <div className="card-actions">
+          <button className="favorite-btn" onClick={toggleFavorite}>
+            {isFavorite ? "♥" : "♡"}
+          </button>
+          <button className="discover-btn">Discover more</button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default DestinationSection;
+export default DestinationCard;
