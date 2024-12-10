@@ -1,17 +1,59 @@
 import React from "react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./DestinationSection.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const DestinationSection = () => {
-  const categories = [
-    { title: "Touristic Cities", destinations: ["CFC Tower Casablanca"] },
-    { title: "Natural Spots", destinations: ["Akchour Waterfalls"] },
-    { title: "Historical Spots", destinations: ["Université Al Quaraouiyine"] },
-    { title: "Sahara", destinations: ["Merzouga Desert"] },
-    { title: "Souks", destinations: ["Place Jamaa El Fna"] },
-    { title: "Artistical Spots", destinations: ["Blue city Tetouan"] },
-  ];
+const data = [
+  {
+    category: "Touristic Cities",
+    items: [
+      {
+        title: "CFC Tower Casablanca",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        image: "https://pbs.twimg.com/media/F7nvRv7XkAAbqd1.jpg:large",
+      },
+      {
+        title: "Rabat City Center",
+        description: "Discover the beauty of Rabat.",
+        image: "https://i.pinimg.com/236x/dc/d2/e0/dcd2e079f321ac6f4b3a4ee64ff7b347.jpg",
+      },
+    ],
+  },
+  {
+    category: "Natural Spots",
+    items: [
+      {
+        title: "Akchour Waterfalls",
+        description: "Explore the stunning waterfalls.",
+        image: "https://i.pinimg.com/474x/6f/52/a8/6f52a80b942d079283b2cdc149f1bfa9.jpg",
+      },
+      {
+        title: "Ouzoud Falls",
+        description: "A breathtaking natural attraction.",
+        image: "https://i.pinimg.com/236x/8c/54/49/8c54491272a3da051045093a7523b2c4.jpg",
+      },
+    ],
+  },
+  {
+    category: "Historical Spots",
+    items: [
+      {
+        title: "Université Al Quaraouiyine",
+        description: "A historical gem in Fez.",
+        image: "https://i.pinimg.com/736x/40/f6/bb/40f6bb556d570ec546bb1e247a8e538f.jpg",
+      },
+      {
+        title: "Hassan Tower",
+        description: "An iconic historical site.",
+        image: "https://i.pinimg.com/236x/7e/07/18/7e0718fab319c9c0a8b1f587cecb24bd.jpg",
+      },
+    ],
+  },
+];
 
 const App = () => {
   return (
@@ -52,7 +94,6 @@ const App = () => {
           </div>
         ))}
       </div>
-
       {/* Deuxième groupe de slides */}
       <div className="grid-container">
         {data.map((carousel, index) => (
@@ -90,6 +131,5 @@ const App = () => {
       </div>
     </div>
   );}
-};
 
 export default App;
