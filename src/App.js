@@ -7,18 +7,17 @@ import Store from "./components/Store/Store";
 import Plan from "./components/Plan/Plan";
 import Home from "./components/landing_page/Home";
 import Favorites from "./components/Favorites/Favorites";
-import Profile from "./components/Profile/Profile";
+
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 
 function App() {
   return (
+    
     <Router >
-      
-      
-      
-
-      
-      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />
@@ -26,7 +25,7 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/plan/*" element={<Plan />} />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/profile" element={<Profile />} />
+        
       </Routes>
     
 
