@@ -1,0 +1,113 @@
+/* Style général de la page */
+.traditional-store {
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .store-content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .store-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .store-content p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Style du Swiper */
+  .swiper-container {
+    margin-top: 20px;
+  }
+  
+  .store-slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .product-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .store-slide-image {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .store-slide-description {
+    margin-top: 15px;
+  }
+  
+  .store-slide-description h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .store-slide-description p {
+    font-size: 1rem;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  .traditional-store-discover-btn {
+    background-color: #f1a33b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .traditional-store-discover-btn:hover {
+    background-color: #e08930;
+  }
+  
+  /* Style du bouton View More */
+  .view-more-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .view-more-btn {
+    padding: 15px 30px;
+    background-color: #f1a33b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-more-btn:hover {
+    background-color: #e08930;
+  }
+  

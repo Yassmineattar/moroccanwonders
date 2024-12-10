@@ -1,6 +1,7 @@
 import React from "react";
-import CategorySlider from "./CategorySlider";
+
 import "./DestinationSection.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const DestinationSection = () => {
   const categories = [
@@ -12,20 +13,83 @@ const DestinationSection = () => {
     { title: "Artistical Spots", destinations: ["Blue city Tetouan"] },
   ];
 
+const App = () => {
   return (
-    <div className="destination-section">
-      <h2>Choose Your Next Destination</h2>
-      <div className="categories-container">
-        {categories.map((category, index) => (
-          <CategorySlider
-            key={index}
-            title={category.title}
-            destinations={category.destinations}
-          />
+    <div>
+      <h1 className="destTitle">Choose Your Next Destination</h1>
+     
+      <div className="grid-container">
+        {data.map((carousel, index) => (
+          <div className="carousel-card" key={index}>
+            <h3 className="carousel-title">{carousel.category}</h3>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+            >
+              {carousel.items.map((item, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="slide-content">
+                    {/* Icône de cœur */}
+                    <div className="favorite-icon">
+                      <i className="fas fa-heart"></i>
+                    </div>
+                    {/* Image */}
+                    <img src={item.image} alt={item.title} className="slide-image" />
+                   
+                    <div className="slide-description">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                    
+                    <button className="discover-btn">Discover More</button>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ))}
+      </div>
+
+      {/* Deuxième groupe de slides */}
+      <div className="grid-container">
+        {data.map((carousel, index) => (
+          <div className="carousel-card" key={index + data.length}>
+            <h3 className="carousel-title">{carousel.category}</h3>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+            >
+              {carousel.items.map((item, idx) => (
+                <SwiperSlide key={idx + data.length}>
+                  <div className="slide-content">
+                   
+                    <div className="favorite-icon">
+                      <i className="fas fa-heart"></i>
+                    </div>
+                    {/* Image */}
+                    <img src={item.image} alt={item.title} className="slide-image" />
+                    
+                    <div className="slide-description">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                    
+                    <button className="discover-btn">Discover More</button>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         ))}
       </div>
     </div>
-  );
+  );}
 };
 
-export default DestinationSection;
+export default App;
