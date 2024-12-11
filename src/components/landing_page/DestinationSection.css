@@ -1,6 +1,7 @@
 /* Conteneur principal */
 .destTitle{
-  color: #0136a4;
+  color: #A64B2A;
+  font-weight: bold;
   text-align: center;
   padding-top: 20px;
   font-size: 2em;
@@ -127,18 +128,18 @@ p {
 .swiper-button-prev,
 .swiper-button-next {
 position: absolute; /* Positionner les flèches par rapport à leur conteneur */
-top: 40%; /* Décaler verticalement les flèches (ajustez la valeur) */
+top: 30%; /* Décaler verticalement les flèches (ajustez la valeur) */
 transform: translateY(-50%); /* Centrer verticalement */
 color: #0136a4; /* Couleur des flèches */
-z-index: 10; /* S'assurer que les flèches sont au-dessus des slides */
+z-index: 30; /* S'assurer que les flèches sont au-dessus des slides */
 }
 
 .swiper-button-prev {
-left: 10px; /* Ajustez la position horizontale de la flèche gauche */
+left: 5px; /* Ajustez la position horizontale de la flèche gauche */
 }
 
 .swiper-button-next {
-right: 10px; /* Ajustez la position horizontale de la flèche droite */
+right: 5px; /* Ajustez la position horizontale de la flèche droite */
 }
 
 
