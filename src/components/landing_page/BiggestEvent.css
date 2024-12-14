@@ -1,59 +1,85 @@
-.biggest-event {
+.biggest-event-carousel {
   position: relative;
-  padding: 70px ;
+  padding: 70px;
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  
-  background-image: url('/public/images/worldcup.png');
-  background-size: cover;
-  background-position: center;
   color: white;
 }
 
-.slide {
+.biggest-event-slide {
   text-align: center;
+  position: relative;
 }
 
-.title {
+.biggest-event-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.description {
+.biggest-event-description {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: aliceblue;
 }
 
-.buttons {
+.biggest-event-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.btn {
+.biggest-event-btn {
   font-size: 1rem;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.primary-btn {
+.biggest-event-primary-btn {
   background-color: #d4a72c;
+  color: white;
+  border-color: #d4a72c;
+}
+
+.biggest-event-primary-btn:hover {
+  background-color: #6a5821; 
+}
+
+
+.biggest-event-secondary-btn {
+  background-color: white;
+  color: #d4a72c;
+  border-color: aliceblue;
+}
+
+.biggest-event-secondary-btn:hover {
+  box-shadow: #6a5821;
+}
+
+.biggest-event-carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
   color: white;
 }
 
-.secondary-btn {
-  background-color: white;
-  color: #d4a72c;
-}
-
-.slick-slider {
+.biggest-event-slick-slider {
   position: relative;
 }
 
-.slick-dots {
+.biggest-event-slick-dots {
   bottom: 10px;
+}
+
+/* */
+.biggest-event-slide img {
+  width: 100%;  /* */
+  height: 400px;  
+  object-fit: cover;  
+  opacity: 0.9;
 }
