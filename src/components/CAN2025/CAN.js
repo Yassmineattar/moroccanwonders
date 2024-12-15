@@ -12,16 +12,16 @@ const canInfo = {
 
 const stadiums = [
   {
-    name: "Stade de Casablanca",
+    name: "Stade Mohammed V Casablanca",
     city: "Casablanca",
     capacity: "67,000",
-    image: "https://static.lematin.ma/files/lematin/images/articles/2023/02/440cc16f017700982032a2c03c0aafca.png",
+    image: "https://www.casa-amenagement.ma/uploads/gallery/travaux-du-complexe-med-v/DJI_0145.JPG",
   },
   {
     name: "Stade de Marrakech",
     city: "Marrakech",
     capacity: "45,000",
-    image: "https://stadiumdb.com/pic-projects/grand_stade_de_marrakech/grand_stade_de_marrakech01.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Stade_de_marrakech.jpg",
   },
   {
     name: "Stade de Tanger",
