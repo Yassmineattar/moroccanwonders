@@ -11,21 +11,21 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const data = [
   {
     title: "Oriental Slippers",
-    description: "Handmade pottery from Fez, crafted by local artisans.",
+    description: "Traditional Moroccan slippers (Babouches), handcrafted with vibrant colors",
     image: "/images/image 14.png",
   },
   {
-    title: "Berber Rugs",
+    title: "Moroccan Products",
     description: "Authentic rugs woven by Berber tribes in the Atlas Mountains.",
     image: "/images/image 17.png", // Remplacez par l'URL de vos images
   },
   {
-    title: "Handcrafted Leather Bags",
+    title: "Traditional Takchita ",
     description: "Made from the finest leather, crafted with love and care.",
     image: "/images/image 16.png", // Remplacez par l'URL de vos images
   },
   {
-    title: "Moroccan Tea Sets",
+    title: "",
     description: "Traditional Moroccan tea sets, perfect for serving mint tea.",
     image: "https://example.com/tea-set.jpg", // Remplacez par l'URL de vos images
   },
