@@ -5,6 +5,7 @@ import WhyVisitMorocco from "./WhyVisitMorocco";
 import BiggestEvent from "./BiggestEvent";
 import DestinationSection from './DestinationSection';
 import TraditionalStore from "./TraditionalStore";
+import PlanYourTrip from "./PlanYourTrip"
 import Footer from "./Footer";
 
 
@@ -17,6 +18,7 @@ const Home = () => {
       <BiggestEvent />
       <DestinationSection />
       <TraditionalStore />
+      <PlanYourTrip />
       <Footer />
 
       

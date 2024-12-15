@@ -8,18 +8,18 @@
 }
 
 .grid-container {
+  background-color: #ffffffff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #f8f9fa;
 }
 
 /* Carte de chaque carrousel */
 .carousel-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   padding: 20px;
   text-align: center;
 }
@@ -65,7 +65,7 @@ p {
   overflow: hidden;
   background: #fff; /* Fond blanc du conteneur */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.);
 }
 
 /* Icône de cœur */
