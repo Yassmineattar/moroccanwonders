@@ -12,7 +12,7 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 /* Carte de chaque carrousel */
@@ -40,7 +40,7 @@
   width: 400px;
   height: 360px;
   flex-shrink: 0;
-  left: 20px;
+  left: 5px;
 }
 .trad-slide-image {
   width: 343px;
@@ -58,7 +58,7 @@ p {
 /* Conteneur de la slide */
 .trad-slide-content {
   position: relative;
-  width: 380px;
+  width: 370px;
 height: 365px;
 flex-shrink: 0;
   display: flex;
