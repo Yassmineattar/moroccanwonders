@@ -1,7 +1,8 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DestinationGeneral from "./components/destinations/DestinationGeneral";
 
-import Destinations from "./components/Destinations/Destinations";
+import DestinationPage from "./components/destinations/DestinationPage";
 import CAN from "./components/CAN2025/CAN";
 import Store from "./components/Store/Store";
 import Plan from "./components/Plan/Plan";
@@ -19,10 +20,11 @@ function App() {
     <Router >
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/plan" element={<Plan />} />
+        <Route path="/destination/:destination" element={<DestinationPage />} />
         <Route path="/can2025" element={<CAN />} />
         <Route path="/store" element={<Store />} />
-        <Route path="/plan/*" element={<Plan />} />
+        <Route path="/destinations/destinationGeneral" element={<DestinationGeneral />} />
         <Route path="/favorites" element={<Favorites />} />
         
       </Routes>

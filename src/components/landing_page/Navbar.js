@@ -32,7 +32,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/destinations">
+              <Link className="nav-link" to="/destinations/destinationGeneral">
                 Destinations
               </Link>
             </li>
@@ -51,7 +51,7 @@ function Navbar() {
                 Plan Your Trip
               </Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="/plan/itinerary">Itinerary</Link></li>
+                <li><Link className="dropdown-item" to="/plan">Plan</Link></li>
                 <li><Link className="dropdown-item" to="/plan/hotels">Hotels</Link></li>
               </ul>
             </li>

@@ -1,0 +1,28 @@
+/* Page principale */
+.plan-page {
+    background-color: #f4f4f9; /* Couleur neutre pour le reste de la page */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+        margin-bottom: 15px;
+
+  }
+  
+  /* Formulaire */
+  .plan-content {
+    background: rgba(255, 255, 255, 0.9); /* Boîte blanche semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: -100px auto 20px; /* Décalage pour remonter sous le header */
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  /* Responsivité */
+  @media screen and (max-width: 768px) {
+    .plan-content {
+      padding: 20px;
+      margin: -50px 10px 10px;
+    }
+  }

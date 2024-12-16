@@ -1,0 +1,58 @@
+/* DestinationPage.css */
+
+.destination-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #34495e;
+    margin-bottom: 15px;
+  }
+  
+  .destination-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .destination-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .reasons-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .reasons-list li {
+    margin-bottom: 10px;
+  }
+  
+  .loading,
+  .error {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-top: 20px;
+  }
+  

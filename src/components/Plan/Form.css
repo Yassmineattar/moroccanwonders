@@ -1,0 +1,132 @@
+/* Conteneur principal */
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Chaque ligne contenant des sections */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Pour responsivité */
+  }
+  
+  /* Section individuelle */
+  .form-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 48%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Hover effect pour les sections */
+  .form-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style des questions */
+  .form-question {
+    font-size: 18px;
+    color: #003580;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Conteneur des options */
+  .form-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Bouton radio */
+  label {
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #003580; /* Couleur personnalisée pour le bouton radio */
+  }
+  
+  /* Bouton de soumission */
+  .submit-button {
+    background-color: #003580;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Centrer le bouton de soumission */
+  .form-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espacement pour le bouton */
+  }
+  
+  /* Effet au survol */
+  .submit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  /* Design responsive */
+  @media screen and (max-width: 1024px) {
+    .form-row {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .form-section {
+      min-width: 100%; /* Chaque section prend toute la largeur */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .form-container {
+      padding: 20px;
+      max-width: 95%;
+    }
+  
+    .form-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .form-submit {
+      margin-top: 15px;
+    }
+  }
+  
+  /* Placeholder color adjustment for input fields */
+  input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  

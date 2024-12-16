@@ -1,0 +1,54 @@
+/* Good Price Deals Section */
+.good-price-deals {
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.good-price-deals h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Deals Grid */
+.deal-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Deal Card */
+.deal-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: scale(1.05);
+}
+
+.deal-card h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.deal-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.deal-card strong {
+    font-size: 18px;
+    color: #28a745;
+    display: block;
+}

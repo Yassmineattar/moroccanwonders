@@ -1,0 +1,129 @@
+/* Destination General Main Container */
+.destination-general {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Top Section with Background Image */
+.destination-top-section {
+    background-image: url('https://www.state.gov/wp-content/uploads/2020/11/shutterstock_186964970-scaled.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px; /* Adjust padding for vertical spacing */
+    position: relative;
+    height:450px;
+}
+
+.destination-top-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    z-index: 1;
+}
+
+.destination-top-section h1,
+.destination-top-section p {
+    position: relative;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.page-description {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Destination Grid Layout */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.destination-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-banner {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.destination-details h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.destination-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.destination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.learn-more-button,
+.plan-trip-button {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button {
+    background-color: #007bff;
+}
+
+.learn-more-button:hover {
+    background-color: #0056b3;
+}
+
+.plan-trip-button {
+    background-color: #28a745;
+}
+
+.plan-trip-button:hover {
+    background-color: #1e7e34;
+}
