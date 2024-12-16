@@ -41,7 +41,7 @@ function Carousel() {
 
         <div className="carousel-item">
           <img
-            src="/images/sahara.jpg" // Assurez-vous que l'image existe dans public/images
+            src="/images/sahara.jpg" 
             className="d-block w-100"
             alt="Deserts"
           />
@@ -52,7 +52,7 @@ function Carousel() {
         </div>
         <div className="carousel-item">
           <img
-            src="/images/fna.jpeg" // Assurez-vous que l'image existe dans public/images
+            src="/images/fna.jpeg" 
             className="d-block w-100"
             alt="Culture"
           />

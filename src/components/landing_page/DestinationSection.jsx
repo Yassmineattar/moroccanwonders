@@ -1,50 +1,135 @@
-import React, { useState, useEffect } from "react";
-import CategorySlider from "./CategorySlider";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./DestinationSection.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const DestinationSection = () => {
-  const [categories, setCategories] = useState([]); // Stockage des catégories
-  const [loading, setLoading] = useState(true); // État de chargement
+const data = [
+  {
+    category: "Touristic Cities",
+    items: [
+      {
+        title: "CFC Tower Casablanca",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        image: "https://pbs.twimg.com/media/F7nvRv7XkAAbqd1.jpg:large",
+      },
+      {
+        title: "Rabat City Center",
+        description: "Discover the beauty of Rabat.",
+        image: "https://i.pinimg.com/236x/dc/d2/e0/dcd2e079f321ac6f4b3a4ee64ff7b347.jpg",
+      },
+    ],
+  },
+  {
+    category: "Natural Spots",
+    items: [
+      {
+        title: "Akchour Waterfalls",
+        description: "Explore the stunning waterfalls.",
+        image: "https://i.pinimg.com/474x/6f/52/a8/6f52a80b942d079283b2cdc149f1bfa9.jpg",
+      },
+      {
+        title: "Ouzoud Falls",
+        description: "A breathtaking natural attraction.",
+        image: "https://i.pinimg.com/236x/8c/54/49/8c54491272a3da051045093a7523b2c4.jpg",
+      },
+    ],
+  },
+  {
+    category: "Historical Spots",
+    items: [
+      {
+        title: "Université Al Quaraouiyine",
+        description: "A historical gem in Fez.",
+        image: "https://i.pinimg.com/736x/40/f6/bb/40f6bb556d570ec546bb1e247a8e538f.jpg",
+      },
+      {
+        title: "Hassan Tower",
+        description: "An iconic historical site.",
+        image: "https://i.pinimg.com/236x/7e/07/18/7e0718fab319c9c0a8b1f587cecb24bd.jpg",
+      },
+    ],
+  },
+];
 
-  // Fonction pour récupérer les données depuis l'API
-  const fetchCategories = async () => {
-    try {
-      const response = await fetch("http://localhost:5000/api/categories"); // URL de votre API
-      const data = await response.json();
-
-      // Transformer les données si nécessaire
-      setCategories(data);
-    } catch (error) {
-      console.error("Erreur lors de la récupération des données :", error);
-    } finally {
-      setLoading(false); // Arrêter l'état de chargement
-    }
-  };
-
-  // Appeler l'API lorsque le composant est monté
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  // Afficher un message de chargement si les données ne sont pas encore prêtes
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
+const App = () => {
   return (
-    <div className="destination-section">
-      <h2>Choose Your Next Destination</h2>
-      <div className="categories-container">
-        {categories.map((category, index) => (
-          <CategorySlider
-            key={index}
-            title={category.title}
-            destinations={category.destinations}
-          />
+    <div>
+      <h1 className="destTitle">Choose Your Next Destination</h1>
+     
+      <div className="grid-container">
+        {data.map((carousel, index) => (
+          <div className="carousel-card" key={index}>
+            <h3 className="carousel-title">{carousel.category}</h3>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+            >
+              {carousel.items.map((item, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="slide-content">
+                    {/* Icône de cœur */}
+                    <div className="favorite-icon">
+                      <i className="fas fa-heart"></i>
+                    </div>
+                    {/* Image */}
+                    <img src={item.image} alt={item.title} className="slide-image" />
+                   
+                    <div className="slide-description">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                    
+                    <button className="discover-btn">Discover More</button>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ))}
+      </div>
+      {/* Deuxième groupe de slides */}
+      <div className="grid-container">
+        {data.map((carousel, index) => (
+          <div className="carousel-card" key={index + data.length}>
+            <h3 className="carousel-title">{carousel.category}</h3>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+            >
+              {carousel.items.map((item, idx) => (
+                <SwiperSlide key={idx + data.length}>
+                  <div className="slide-content">
+                   
+                    <div className="favorite-icon">
+                      <i className="fas fa-heart"></i>
+                    </div>
+                    {/* Image */}
+                    <img src={item.image} alt={item.title} className="slide-image" />
+                    
+                    <div className="slide-description">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                    
+                    <button className="discover-btn">Discover More</button>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         ))}
       </div>
     </div>
-  );
-};
+  );}
 
-export default DestinationSection;
+export default App;

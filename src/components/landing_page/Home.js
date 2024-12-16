@@ -4,6 +4,9 @@ import Carousel from "./Carousel";
 import WhyVisitMorocco from "./WhyVisitMorocco";
 import BiggestEvent from "./BiggestEvent";
 import DestinationSection from './DestinationSection';
+import TraditionalStore from "./TraditionalStore";
+import PlanYourTrip from "./PlanYourTrip"
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -14,6 +17,9 @@ const Home = () => {
       <WhyVisitMorocco />
       <BiggestEvent />
       <DestinationSection />
+      <TraditionalStore />
+      <PlanYourTrip />
+      <Footer />
 
       
     </div>
