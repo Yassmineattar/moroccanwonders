@@ -14,8 +14,6 @@
     box-shadow: none !important;
 }
 
-
-
 /*Changement*/
 /*
 .carousel-inner {
@@ -263,6 +261,10 @@ input[type="text"]::placeholder {
 
 /* Écran mobile (max-width: 767px) */
 @media (max-width: 767px) {
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
   /* Ajustements pour la barre de recherche */
   .search-bar {
       width: 70%; /* Réduit la largeur */

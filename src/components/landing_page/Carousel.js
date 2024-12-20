@@ -87,8 +87,8 @@ function Carousel() {
             <div className="carousel-caption">
               <h5>Explore Morocco's Blue Gem</h5>
               <p>
-                Chefchaouen is undoubtedly one of Morocco's (and possibly the world's) most
-                Instagrammable spots, thanks to the blue hues that surround every nook and cranny.
+                Chefchaouen is undoubtedly one of Morocco's most
+                Instagrammable spots.
               </p>
               <div className="carousel-buttons">
                 <button className={`btn-slide-${currentSlide}`}>Explore our Culture</button>
