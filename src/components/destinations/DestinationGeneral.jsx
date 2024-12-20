@@ -6,12 +6,14 @@ import BestHotels from './BestHotels';
 import MostViewed from './MostViewed';
 import GoodPriceDeals from './GoodPriceDeals';
 import './DestinationGeneral.css';
+import Footer from '../landing_page/Footer';
 
-const DestinationGeneral = () => {
-    const [destinations, setDestinations] = useState([]);
+const DestinationGeneral = ({ favorites, setFavorites, favoriteHotels, setFavoriteHotels }) => {
+    const [destinations, setDestinations] = useState([]); // Store all destinations
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Fetch destinations from the API
     useEffect(() => {
         const fetchDestinations = async () => {
             try {
@@ -32,13 +34,27 @@ const DestinationGeneral = () => {
         fetchDestinations();
     }, []);
 
-    if (loading) return <div className="loading">Loading...</div>;
+    // Toggle favorite destinations
+    const toggleFavorite = (destination) => {
+        const index = favorites.findIndex((fav) => fav.destination === destination.destination);
+        if (index !== -1) {
+            // Remove from favorites
+            const updatedFavorites = [...favorites];
+            updatedFavorites.splice(index, 1);
+            setFavorites(updatedFavorites);
+        } else {
+            // Add to favorites
+            setFavorites([...favorites, destination]);
+        }
+    };
+
+    if (loading) return <div className="loading">Loading destinations...</div>;
     if (error) return <div className="error">{error}</div>;
 
     return (
         <div>
             <Navbar />
-            {/* Top Section with Background Image */}
+            {/* Top Section */}
             <div className="destination-top-section">
                 <h1 className="page-title">Explore Destinations</h1>
                 <p className="page-description">
@@ -46,11 +62,25 @@ const DestinationGeneral = () => {
                 </p>
             </div>
 
+            {/* Main Content */}
             <div className="destination-general">
-                {/* Main Destinations Grid */}
+            <h1 class="centered-title">Best Destinations</h1>
+
+                {/* Destinations Grid */}
                 <div className="destination-grid">
                     {destinations.map((destination, index) => (
                         <div key={index} className="destination-card">
+                            {/* Favorite Icon */}
+                            <div
+                                className={`favorite-icon ${
+                                    favorites.findIndex((fav) => fav.destination === destination.destination) !== -1
+                                        ? 'active'
+                                        : ''
+                                }`}
+                                onClick={() => toggleFavorite(destination)}
+                            >
+                                ❤️
+                            </div>
                             <img
                                 src={destination.bannerImage}
                                 alt={destination.destination}
@@ -79,12 +109,15 @@ const DestinationGeneral = () => {
                 </div>
 
                 {/* Additional Sections */}
-                
-                <BestHotels />
+                <BestHotels 
+                    favoriteHotels={favoriteHotels} 
+                    setFavoriteHotels={setFavoriteHotels} 
+                />
                 <MostViewed destinations={destinations} />
                 <GoodPriceDeals />
                 <BlogSection />
             </div>
+            <Footer/>
         </div>
     );
 };

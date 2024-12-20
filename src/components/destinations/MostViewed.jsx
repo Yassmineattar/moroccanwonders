@@ -3,11 +3,12 @@ import './MostViewed.css';
 
 const MostViewed = ({ destinations }) => (
     <div className="most-viewed">
-        <h2>Most Viewed</h2>
+        <h1 className="centered-title">Most Viewed</h1>
         <ul>
             {destinations.slice(0, 3).map((dest, index) => (
                 <li key={index}>
-                    <strong>{dest.destination}</strong> - {dest.description}
+                    <strong>{dest.destination}</strong>
+                    <span>{dest.description}</span>
                 </li>
             ))}
         </ul>

@@ -4,6 +4,7 @@ import HeaderBackground from "./HeaderBackground";
 import "./Plan.css";
 import Navbar from "../landing_page/Navbar";
 import Form from "./Form";
+import Footer from "../landing_page/Footer";
 
 
 function Plan() {
@@ -12,7 +13,7 @@ function Plan() {
       <Navbar/>
       <HeaderBackground /> 
       <Form/>
-
+      <Footer/>
 
       
     </div>

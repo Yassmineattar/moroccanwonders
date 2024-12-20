@@ -2,6 +2,7 @@
 .destination-general {
     font-family: Arial, sans-serif;
     color: #333;
+    background-color: #ffffff;
 }
 
 /* Top Section with Background Image */
@@ -58,24 +59,49 @@
     background-color: #f9f9f9;
 }
 
+/* Destination Card */
 .destination-card {
+    position: relative;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .destination-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Favorite Heart Icon */
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.favorite-icon.active {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+.favorite-icon:hover {
+    color: #ff0000;
+}
+
+/* Banner Image */
 .destination-banner {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
+/* Card Details */
 .destination-details {
     padding: 15px;
     text-align: center;
@@ -83,8 +109,8 @@
 
 .destination-details h2 {
     font-size: 22px;
-    margin-bottom: 10px;
     color: #444;
+    margin-bottom: 10px;
 }
 
 .destination-details p {
@@ -94,6 +120,7 @@
     line-height: 1.5;
 }
 
+/* Buttons */
 .destination-buttons {
     display: flex;
     justify-content: center;
@@ -103,10 +130,10 @@
 .learn-more-button,
 .plan-trip-button {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 8px 8px;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
+    color: white;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -126,4 +153,20 @@
 
 .plan-trip-button:hover {
     background-color: #1e7e34;
+}
+
+.centered-title {
+    text-align: center; /* Horizontally center the text */
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold; /* Make it bold */
+    color: #333; /* Darker color for better readability */
+    margin: 20px 0; /* Add vertical margin */
+}
+
+/* If you need to vertically center it within a container */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Adjust height as needed */
 }

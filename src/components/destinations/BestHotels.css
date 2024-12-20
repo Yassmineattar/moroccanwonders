@@ -1,54 +1,91 @@
-/* Best Hotels Section */
 .best-hotels {
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: #f9f9f9; /* Subtle background for contrast */
 }
 
-.best-hotels h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-/* Hotels Grid */
 .hotel-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust for responsiveness */
+    gap: 25px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    padding: 0 20px;
 }
 
-/* Individual Hotel Card */
 .hotel-card {
-    background: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    border-radius: 15px; /* Smoother rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
     overflow: hidden;
-    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
 .hotel-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-8px); /* Higher hover effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-.hotel-card img {
+.hotel-image {
     width: 100%;
-    height: 180px;
+    height: 180px; /* Larger image for better visibility */
     object-fit: cover;
+    border-bottom: 1px solid #eee; /* Subtle divider */
 }
 
 .hotel-card h3 {
-    font-size: 22px;
-    margin: 15px 0;
-    color: #555;
+    font-size: 20px; /* Larger font for titles */
+    margin: 15px 0 10px;
+    color: #333;
+    font-weight: bold;
 }
 
 .hotel-card p {
-    font-size: 14px;
-    color: #777;
-    padding: 0 10px 15px;
+    font-size: 15px;
+    color: #666;
+    padding: 0 15px 15px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Heart Icon */
+.hotel-favorite-icon {
+    position: absolute;
+    top: 15px; /* Better spacing from edges */
+    right: 15px;
+    font-size: 28px; /* Slightly larger icon */
+    color: #ccc; /* Default inactive state */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Ensure it's above the image */
+}
+
+.hotel-favorite-icon:hover {
+    color: #ff6b6b; /* Bright red for hover */
+    transform: scale(1.2); /* Zoom effect */
+}
+
+.hotel-favorite-icon.active {
+    color: #ff6b6b; /* Active (selected) red */
+    transform: scale(1.2);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hotel-card h3 {
+        font-size: 18px; /* Smaller title font for smaller screens */
+    }
+
+    .hotel-card p {
+        font-size: 14px;
+        padding: 0 10px 10px;
+    }
+
+    .hotel-image {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+
+    .hotel-favorite-icon {
+        font-size: 24px; /* Adjust icon size */
+    }
 }

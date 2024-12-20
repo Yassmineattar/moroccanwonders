@@ -1,0 +1,49 @@
+/* Main container for the header */
+.favorites-header {
+    position: relative;
+    background-image: url("https://www.moroccoworldnews.com/wp-content/uploads/2015/05/In-Pictures-Moroccos-Top-Ten-Beautiful-Natural-Sites.jpg"); /* Change URL to your background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* White text */
+    text-align: center;
+}
+
+/* Overlay for darkening the background image */
+.favorites-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure it's behind the content */
+}
+
+/* Content container */
+.favorites-header-content {
+    position: relative;
+    z-index: 2; /* Place above the overlay */
+    padding: 20px;
+}
+
+/* Title styling */
+.favorites-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Subtitle styling */
+.favorites-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}

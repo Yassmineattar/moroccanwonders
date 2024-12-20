@@ -1,68 +1,98 @@
 /* Main container for activities */
 .destination-activities {
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 1500px;
-  }
-  
-  /* Title for the activities section */
-  .activities-title {
-    font-size: 28px;
-    color: #3a007b; /* Bold purple for the title */
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* Flexbox container for activity cards */
-  .activities-list {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
-  }
-  
-  /* Individual activity card */
+  padding: 40px 20px; 
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  background-color: #ffffff; 
+  border-radius: 12px; 
+}
+
+/* Title for the activities section */
+.activities-title {
+  font-size: 32px;
+  color: #4b0082;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase; 
+  letter-spacing: 1.5px; 
+}
+
+/* Flexbox container for activity cards */
+.activities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px; 
+  justify-content: center;
+}
+
+/* Individual activity card */
+.activity-card {
+  background: #ffffff;
+  border-radius: 15px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  padding: 20px;
+  max-width: 400px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative; 
+}
+
+/* Hover effect for activity cards */
+.activity-card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image in activity card */
+.activity-image {
+  width: 100%;
+  height: 220px; /* Larger image for visual appeal */
+  object-fit: cover;
+  border-radius: 12px; /* Rounded image edges */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow for focus */
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover .activity-image {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Activity title */
+.activity-title {
+  font-size: 20px; /* Slightly larger for emphasis */
+  color: #4b0082; /* Deep indigo for headings */
+  margin: 15px 0;
+  font-weight: 700; /* Bold title */
+  text-transform: capitalize;
+  letter-spacing: 0.5px; /* Modern spacing */
+}
+
+/* Activity description */
+.activity-description {
+  font-size: 16px;
+  color: #666; /* Softer neutral text color */
+  line-height: 1.6; /* Improved readability */
+  padding: 0 10px; /* Add padding for better layout */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .activity-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-    max-width: 300px; /* Consistent card size */
-    flex: 1;
-    min-width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 15px;
   }
-  
-  /* Hover effect for activity cards */
-  .activity-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Image in activity card */
-  .activity-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Activity title */
+
   .activity-title {
-    font-size: 18px;
-    color: #3a007b; /* Same bold purple for headings */
-    margin: 10px 0;
-    font-weight: bold;
+      font-size: 18px;
   }
-  
-  /* Activity description */
+
   .activity-description {
-    font-size: 16px;
-    color: #555; /* Neutral text color for good readability */
-    line-height: 1.4;
+      font-size: 14px;
   }
-  
+
+  .activity-image {
+      height: 180px; /* Adjust image height for smaller screens */
+  }
+}

@@ -5,8 +5,11 @@ import DestinationHeader from "./DestinationHeader";
 //import DestinationMap from "./DestinationMap";
 import DestinationActivities from "./DestinationActivities";
 import DestinationAccommodations from "./DestinationAccommodations";
+
 import "./DestinationPage.css";
 import Navbar from "../landing_page/Navbar";
+import Footer from "../landing_page/Footer";
+import DestinationMap from "./DestinationMap";
 
 const DestinationPage = () => {
   const location = useLocation();
@@ -41,18 +44,26 @@ const DestinationPage = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
+    
     <div className="destination-page">
       <Navbar/>
       <DestinationHeader
         title={`Welcome to ${destinationData.destination}`}
         bannerImage={destinationData.bannerImage}
       />
+      
+      {/* Other sections */}
+      <DestinationMap destination={destination} />
+
+    
       <DestinationActivities activities={destinationData.activities} />
       <DestinationAccommodations accommodations={destinationData.accommodations} />
     {/*<DestinationMap mapPoints={destinationData.mapPoints} />
       <DestinationActivities activities={destinationData.activities} />
-  <DestinationAccommodations accommodations={destinationData.accommodations} />*/}
+     />*/}
+    <Footer/>
     </div>
+    
   );
 };
 

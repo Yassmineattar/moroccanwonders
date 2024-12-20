@@ -1,0 +1,102 @@
+.favorite-hotels {
+    padding: 40px 20px;
+    margin-top: 20px;
+    background-color: #f3f4f6; /* Slightly lighter background for contrast */
+}
+
+.favorite-hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Increased gap for better spacing */
+    justify-content: center;
+    padding: 20px;
+}
+
+.favorite-hotel-card {
+    background-color: #fff;
+    border-radius: 15px; /* Smoother rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.favorite-hotel-card:hover {
+    transform: translateY(-10px); /* More pronounced lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.favorite-hotel-image {
+    width: 100%;
+    height: 200px; /* Slightly larger for better visuals */
+    object-fit: cover;
+    border-bottom: 2px solid #eee; /* Subtle divider */
+}
+
+.favorite-hotel-card h3 {
+    font-size: 22px; /* Larger font for titles */
+    color: #2d3748; /* Darker color for better contrast */
+    margin: 15px 0 10px;
+    font-weight: 700; /* Bolder titles */
+    line-height: 1.3;
+}
+
+.favorite-hotel-card p {
+    font-size: 16px;
+    color: #4a5568; /* Subtle gray for descriptions */
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Heart Icon for Favorite */
+.favorite-hotel-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 26px; /* Slightly larger icon */
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+
+.favorite-hotel-icon.active {
+    color: #e63946; /* Bright red for active favorites */
+    transform: scale(1.2); /* Slight zoom for active state */
+}
+
+.favorite-hotel-icon:hover {
+    color: #e63946; /* Red on hover */
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .favorite-hotel-card h3 {
+        font-size: 18px; /* Smaller titles for smaller screens */
+    }
+
+    .favorite-hotel-card p {
+        font-size: 14px; /* Adjusted description font size */
+    }
+
+    .favorite-hotel-image {
+        height: 160px; /* Adjust image height for smaller screens */
+    }
+
+    .favorite-hotel-icon {
+        font-size: 22px; /* Smaller heart icon */
+    }
+}
+
+/* No Favorites Message */
+.no-favorites-message {
+    text-align: center;
+    font-size: 18px;
+    color: #6b7280; /* Neutral gray */
+    padding: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
