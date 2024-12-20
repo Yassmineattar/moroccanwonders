@@ -6,7 +6,7 @@ import DestinationHeader from "./DestinationHeader";
 import DestinationActivities from "./DestinationActivities";
 import DestinationAccommodations from "./DestinationAccommodations";
 import "./DestinationPage.css";
-import Navbar from "../landing_page/Navbar";
+import Navbar from "../layout/Navbar";
 
 const DestinationPage = () => {
   const location = useLocation();

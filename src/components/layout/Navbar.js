@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaUser, FaHeart } from "react-icons/fa";
 import { IoLanguageOutline } from "react-icons/io5";
 import "./Navbar.css";
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Change state if scrolled more than 50px
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav className={`navbar navbar-expand-lg ${scrolled ? "scrolled" : ""}`}>
       <div className="container">
         {/* Brand Name */}
         <Link className="navbar-brand" to="/">
@@ -26,7 +38,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           {/* Navigation Links */}
           <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/">
                 Home
               </Link>
@@ -47,12 +59,25 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/plan" role="button" data-bs-toggle="dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="/plan"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
                 Plan Your Trip
               </Link>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" to="/plan">Plan</Link></li>
-                <li><Link className="dropdown-item" to="/plan/hotels">Hotels</Link></li>
+                <li>
+                  <Link className="dropdown-item" to="/plan">
+                    Plan
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/plan/hotels">
+                    Hotels
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

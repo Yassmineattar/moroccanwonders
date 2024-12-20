@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -15,8 +16,8 @@ L.Icon.Default.mergeOptions({
 const PlanYourTrip = () => {
   const center = [31.7917, -7.0926]; // Center of Morocco
   const markers = [
-    { id: 1, position: [31.63, -8.01], name: "Marrakech" },
-    { id: 2, position: [34.02, -6.84], name: "Rabat" },
+    { id: 1, name: "Marrakech", position: [31.63, -8.01]},
+    { id: 2, name: "Rabat", position: [34.02, -6.84]},
     { id: 3, name: "Fes", position: [34.0331, -5.0003] },
     { id: 4, name: "Casablanca", position: [33.5731, -7.5898] },
     { id: 5, name: "Chefchaouen", position: [35.1700, -5.2647] },
@@ -34,7 +35,9 @@ const PlanYourTrip = () => {
         </p>
         <br></br>
         <div className="buttons">
-          <button className="start-now">Start Now</button>
+        <Link to="/plan">
+            <button className="start-now">Start Now</button>
+          </Link>
           <button className="choose-map">Choose in the map</button>
         </div>
       </div>

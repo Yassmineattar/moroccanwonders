@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Navbar from '../landing_page/Navbar';  
+import Navbar from '../layout/Navbar';  
 import './CAN.css';  
-import Footer from '../landing_page/Footer';  
+ 
 
 const canInfo = {
   title: "CAN 2025 in Morocco",
@@ -104,7 +104,6 @@ const CAN = () => {
 
   return (
     <div className="can-page">
-      <Navbar />  {/* Navbar ajoutée ici */}
 
       <header className="header" style={{ backgroundImage: "url('/images/can2.png')" }}>
         <div className="">
@@ -149,8 +148,6 @@ const CAN = () => {
       ) : (
         <p>Please select a city to see the available activities.</p>
       )}
-
-      <Footer />  
     </div>
   );
 };

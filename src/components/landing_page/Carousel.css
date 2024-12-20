@@ -8,7 +8,20 @@
     height: 100%;
     object-fit: cover; 
   }
-  
+  /* Enlever le background bleu sur les flèches */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+}
+
+/* Supprimer le changement de couleur au survol */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
   .carousel-caption {
     position: absolute;
     top: 50%; 

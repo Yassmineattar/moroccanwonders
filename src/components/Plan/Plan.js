@@ -2,7 +2,7 @@ import React from "react";
 import HeaderBackground from "./HeaderBackground";
 
 import "./Plan.css";
-import Navbar from "../landing_page/Navbar";
+import Navbar from "../layout/Navbar";
 import Form from "./Form";
 
 

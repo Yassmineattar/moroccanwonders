@@ -1,10 +1,17 @@
-/* Navbar container styles */
+/* Navbar initial (transparent) */
 .navbar {
-  background-color: transparent; /* Transparent background */
-  position: absolute;
+  background-color: #0136a4;
+  position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1030;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   padding: 10px 20px;
+}
+
+/* Navbar scrolled */
+.navbar.scrolled {
+  background-color: #0136a4; /* Change background color */ /* Add shadow for depth */
 }
 
 /* Navbar brand (logo/text) */
@@ -13,6 +20,9 @@
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+.navbar-brand:hover{
+  color: #8C431D;
 }
 
 /* Links styles */
