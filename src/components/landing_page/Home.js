@@ -19,7 +19,7 @@ const Home = () => {
         <WhyVisitMorocco />
 
         <BiggestEvent />
-
+   
         <DestinationSection />
 
         <TraditionalStore />

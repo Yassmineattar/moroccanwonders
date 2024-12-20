@@ -78,7 +78,7 @@ const TraditionalStore = () => {
       >
         {groupedProducts.map((group, idx) => (
           <SwiperSlide key={idx}>
-            <div className="grid-container">
+            <div className="grid-containerr">
               {group.map((item, itemIdx) => (
                 <div key={itemIdx}>
                   <div className="trad-slide-content">

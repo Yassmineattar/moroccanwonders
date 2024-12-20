@@ -75,7 +75,17 @@
 .biggest-event-slick-dots {
   bottom: 10px;
 }
-
+/* Ajout d'un overlay noir semi-transparent */
+.biggest-event-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);  /* Semi-transparence noire */
+  z-index: 5;
+}
 /* */
 .biggest-event-slide img {
   width: 100%;  /* */

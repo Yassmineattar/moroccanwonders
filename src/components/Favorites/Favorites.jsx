@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Favorites.css';
 import FavoriteHotels from './FavoriteHotels'; // Import FavoriteHotels component
 import FavoritesHeader from './FavoritesHeader';
-import Footer from '../layout/Footer';
 const Favorites = ({ favorites = [], favoriteHotels = [] }) => {
     return (
         <div className="favorites-page">
@@ -58,7 +57,6 @@ const Favorites = ({ favorites = [], favoriteHotels = [] }) => {
                 <h2>Your Favorite Hotels</h2>
                 <FavoriteHotels favoriteHotels={favoriteHotels} /> {/* Pass favoriteHotels */}
             </section>
-            <Footer/>
         </div>
     );
 };

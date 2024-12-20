@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../layout/Navbar"; // Assurez-vous d'importer correctement le Navbar
 import "./FavoritesHeader.css";
 
 const FavoritesHeader = () => {
   return (
     <div className="favorites-header">
-      <Navbar />
       <div className="favorites-header-content">
         <h1 className="favorites-title">Your Favorites</h1>
         <p className="favorites-subtitle">
