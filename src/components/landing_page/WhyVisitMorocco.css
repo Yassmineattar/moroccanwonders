@@ -1,110 +1,155 @@
 .why-visit-morocco {
-    display: flex;
-    justify-content: space-between; /* Espacement équilibré entre le texte et les images */
-    align-items: center;
-    padding: 20px; /* Réduire les espaces blancs avec 5% de marge à gauche et à droite */
-    background-color: #fff;
-    height: 600px;
-  }
-  
-  .container {
-    display: flex;
-    max-width: 1800px;
-    width: 100%;
-    gap: 20px; /* Espacement entre le texte et les images */
-  }
-  
-  /* Texte à gauche */
-  .text-content {
-    flex: 1;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #8C431D;
-    margin-bottom: 20px;
-  }
-  
-  .section-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.8;
-  }
+  display: flex;
+  justify-content: space-between; /* Espacement équilibré entre le texte et les images */
+  align-items: center;
+  padding: 20px; /* Réduire les espaces blancs avec 5% de marge à gauche et à droite */
+  background-color: #fff;
+  height: 600px;
+}
 
-  /* Galerie d'images */
-  .image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.container {
+  display: flex;
+  max-width: 1800px;
+  width: 100%;
+  gap: 20px; /* Espacement entre le texte et les images */
+}
+
+/* Texte à gauche */
+.text-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #8C431D;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Galerie d'images */
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  gap: 0px;
+  right: -50px;
+  padding-bottom: 100px;
+}
+
+.gallery-image {
+  position: relative;
+  height: 340px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 95px; /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, z-index 0.5s ease;
+  cursor: pointer;
+  right: 40px;
+}
+
+/* Image active */
+.gallery-image.active {
+  transform: scale(1.3); /* Agrandir légèrement l'image active */
+  z-index: 2;
+  width: 180px;
+}
+
+/* Images en arrière-plan */
+.gallery-image.behind {
+  transform: scale(1); /* Réduire légèrement les images derrière */
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+/* Effet au survol */
+.gallery-image:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
   
-  .gallery-container {
-    position: relative;
-    display: flex;
-    gap: 0px;
-    right: -50px;
-    padding-bottom: 100px;
-  }
-  
-  .gallery-image {
-    position: relative;
-    height: 340px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 95px; /* Coins arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.5s ease, z-index 0.5s ease;
-    cursor: pointer;
-    right: 40px;
-  }
-  
-  /* Image active */
-  .gallery-image.active {
-    transform: scale(1.3); /* Agrandir légèrement l'image active */
-    z-index: 2;
-    width: 180px;
-  }
-  
-  /* Images en arrière-plan */
-  .gallery-image.behind {
-    transform: scale(1); /* Réduire légèrement les images derrière */
-    filter: brightness(0.7);
-    z-index: 1;
-  }
-  
-  /* Effet au survol */
-  .gallery-image:hover {
-    transform: scale(1.1);
-    filter: brightness(1);
-    
-  }
-  
-  /* Responsivité */
-  @media (max-width: 1024px) {
-    .why-visit-morocco {
-      flex-direction: column; /* Empilement vertical sur écrans étroits */
-      align-items: center; /* Centrer les éléments */
-      padding: 50px 20px; /* Augmenter un peu le padding latéral */
-    }
-  
-    .container {
-      flex-direction: column;
-    }
-  
-    .text-content {
-      margin-bottom: 30px;
-    }
-  
-    .gallery-container {
-      gap: -30px; /* Réduire le chevauchement */
-    }
-  
-    .gallery-image {
-      height: 300px;
-      width: 200px;
-    }
-  }
-  
+}
+
+/* Responsivité */
+/* ... autres styles ... */
+
+/* Responsivité améliorée */
+@media (max-width: 1024px) {
+.why-visit-morocco {
+  flex-direction: column; /* Empilement vertical */
+  align-items: center; /* Centrer les éléments */
+  padding: 60px 20px; /* Augmenter un peu le padding latéral et top/bottom */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  flex-direction: column;
+  width: 100%;
+}
+
+.text-content {
+  margin-bottom: 30px;
+  text-align: center; /* Centrer le texte sur mobile */
+}
+
+.section-title {
+  font-size: 2rem; /* Réduire la taille du titre pour mobile */
+}
+
+.section-description {
+  font-size: 1rem; /* Réduire la taille du texte pour mobile */
+  padding: 0 10px; /* Ajouter un peu de padding horizontal */
+  text-align: center; /* Centrer le texte sur mobile */
+}
+
+.gallery-container {
+  gap: -20px; /* Réduire un peu le chevauchement */
+  justify-content: center; /* Centrer les images */
+}
+
+.gallery-image {
+  height: auto;
+  width: 70%; /* Ajuster la largeur pour mieux s'adapter */
+  max-width: 190px; /* Limiter la largeur maximale des images */
+  object-fit: cover;
+}
+
+.gallery-image.active {
+  width: 100%; /* L'image active prend plus de place */
+}
+
+.gallery-image.behind {
+  width: 70%; /* Réduire légèrement les images derrière */
+}
+}
+
+@media (max-width: 600px) {
+.why-visit-morocco {
+  padding: 50px 10px;
+}
+
+.section-title {
+  font-size: 1.8rem; /* Réduire davantage la taille sur les très petits écrans */
+}
+
+.section-description {
+  font-size: 0.9rem; /* Réduire encore la taille pour les très petits écrans */
+}
+
+.gallery-image {
+  width: 70%; /* Réduire davantage la taille des images */
+}
+}
