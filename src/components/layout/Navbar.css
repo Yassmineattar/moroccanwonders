@@ -11,7 +11,7 @@
 
 /* Navbar scrolled */
 .navbar.scrolled {
-  background-color: #0136a4; /* Change background color */ /* Add shadow for depth */
+  background-color: #0136a4; /* Change background color */
 }
 
 /* Navbar brand (logo/text) */
@@ -21,7 +21,7 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.navbar-brand:hover{
+.navbar-brand:hover {
   color: #8C431D;
 }
 
@@ -62,7 +62,7 @@
 
 .dropdown-menu .dropdown-item:hover {
   background-color: #ffcc00;
-  color: black;
+  
 }
 
 /* Responsive navbar */
@@ -75,7 +75,44 @@
   border-radius: 3px;
 }
 
-/* Adjust spacing for alignment */
-.ms-auto {
-  margin-left: auto;
+/* Ajuster la visibilité et l'alignement sur mobile */
+@media (max-width: 767px) {
+  .navbar-toggler {
+    position: absolute; 
+    right: 10px;
+    top: 5px;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 60%; /* Ajuste la largeur du menu déroulant */
+    background-color: #0136a4; /* Fond bleu */
+    padding-top: 20px; /* Espacement pour éviter le chevauchement avec la barre supérieure */
+    display: flex;
+    flex-direction: column; /* Empile les éléments du menu verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: flex-start; /* Aligner les éléments du menu vers le haut */
+  }
+
+  .navbar-nav {
+    width: 100%; /* Les éléments prennent toute la largeur du menu */
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center; /* Centre le texte dans chaque lien */
+    padding: 15px 0; 
+    width: 100%; 
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: #8C431D; /* Fond au survol */
+  }
 }
