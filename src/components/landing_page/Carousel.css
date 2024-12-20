@@ -1,13 +1,4 @@
-.carousel-inner {
-    width: 100%;
-    height: 600px; 
-  }
-  
-  .carousel-inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-  }
+
   /* Enlever le background bleu sur les flèches */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -22,6 +13,22 @@
     background-color: transparent !important;
     box-shadow: none !important;
 }
+
+
+
+/*Changement*/
+/*
+.carousel-inner {
+    width: 100%;
+    height: 600px; 
+  }
+  
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  } 
+  
   .carousel-caption {
     position: absolute;
     top: 50%; 
@@ -72,3 +79,281 @@
     font-size: 50px;
     
   }
+
+  */
+
+  /* Navbar Toggler */
+.navbar-toggler {
+  position: fixed; /* Position fixe */
+  top: 5%; /* À 5% du haut de la fenêtre */
+  right: 5%; /* À 5% de l'extrémité droite */
+  z-index: 3; /* S'assurer qu'il soit au-dessus des autres éléments */
+  background-color: transparent; /* Pour que le bouton ne couvre pas le contenu */
+  border: none; /* Retirer la bordure du bouton */
+}
+
+/* Navbar collapse */
+.navbar-collapse {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+/* Barre de recherche */
+.search-bar {
+  position: absolute;
+  top: 10%; /* Positionne la barre légèrement plus bas */
+  left: 50%;
+  transform: translateX(-50%);
+  /*background-color: rgba(255, 255, 255, 0.7);*/
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 40px;
+  width: 35%; /* Largeur de la barre de recherche */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  height: 50px;
+  border-style: solid;
+  border-color: #fff;
+  
+}
+
+.search-bar input:focus {
+  outline: none;  /* Supprimer le contour (cadre) qui apparaît lors de la sélection */
+}
+
+
+.search-bar i {
+  position: absolute; /* Positionner l'icône à l'intérieur */
+  right: 20px; /* Placer l'icône à droite du champ de recherche */
+  font-size: 20px;
+  color: #ffffff;
+  z-index: 3; /* Assurez-vous que l'icône est au-dessus de l'input */
+}
+
+
+input[type="text"]::placeholder {
+  color: white; /* Texte du placeholder en blanc */
+  text-align: center;
+  
+}
+
+.search-bar input {
+  width: 80%;
+  border: none;
+  padding: 5px;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #ffffff !important;
+}
+/*
+.search-bar button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}*/
+
+.search-bar button:hover {
+  background-color: #004080;
+}
+
+/* Carrousel */
+.carousel-inner {
+  width: 100%;
+  height: 600px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 25%; /* Position ajustée pour donner plus d'espace */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  width: 80%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  max-width: 900px;
+}
+
+.carousel-caption h5 {
+  font-size: 60px; /* Taille du titre */
+  font-family: 'Poppins', serif;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  line-height: 1.6;
+}
+
+/* Boutons du carrousel */
+/* Espacement des boutons dans le carrousel */
+/* Conteneur des boutons du carrousel */
+.carousel-buttons {
+  display: flex; /* Utilise Flexbox pour aligner les boutons */
+  justify-content: space-between; /* Espacement automatique entre les boutons */
+  gap: 20px; /* Espace de 20px entre chaque bouton */
+  margin-top: 20px; /* Espacement vers le bas */
+}
+/* Style de base des boutons */
+.carousel-buttons .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+/* Couleur spécifique pour le premier slide (btn-slide-0) */
+.carousel-buttons .btn-slide-0 {
+  background-color: #A64B2A;
+  color: white;
+}
+
+.carousel-buttons .btn-slide-0:hover {
+  background-color: #893c20;
+}
+
+/* Couleur spécifique pour le deuxième slide (btn-slide-1) */
+.carousel-buttons .btn-slide-1 {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.carousel-buttons .btn-slide-1:hover {
+  background-color: #7d3c98;
+}
+
+/* Couleur spécifique pour le troisième slide (btn-slide-2) */
+.carousel-buttons .btn-slide-2 {
+  background-color: #0136A4;
+  color: white;
+}
+
+.carousel-buttons .btn-slide-2:hover {
+  background-color: #0136A4;
+}
+
+
+/**/
+
+/* Responsive Design */
+
+/* Écran mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Ajustements pour la barre de recherche */
+  .search-bar {
+      width: 70%; /* Réduit la largeur */
+      top: 8%;
+      padding: 10px;
+      height: 30px;
+      color: #fff;
+      
+  }
+
+  .search-bar input {
+      padding: 6px;
+      color: #fff;
+       
+  }
+
+  .search-bar i {
+    position: absolute; /* Positionner l'icône à l'intérieur */
+    right: 10px; /* Placer l'icône à droite du champ de recherche */
+    font-size: 15px;
+    color: #ffffff;
+    z-index: 3; /* Assurez-vous que l'icône est au-dessus de l'input */
+    top: 6px;
+  }
+
+
+  
+
+
+  /* Carrousel */
+  .carousel-inner {
+      height: 400px; /* Réduit la hauteur sur mobile */
+  }
+
+  .carousel-caption {
+      top: 20%; /* Ajuste la position du texte */
+      width: 90%; /* Réduit la largeur du texte */
+  }
+
+  .carousel-caption h5 {
+      font-size: 30px; /* Réduit la taille du titre */
+      padding-top: 20px;
+  }
+
+  .carousel-caption p {
+      font-size: 1rem; /* Réduit la taille du texte */
+  }
+
+  .carousel-buttons .btn {
+      padding: 8px 15px; /* Réduit la taille des boutons */
+  }
+}
+
+/* Tablette (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .search-bar {
+      width: 50%; /* Largeur plus petite */
+  }
+
+  .carousel-caption {
+      width: 80%; /* Largeur du texte */
+  }
+
+  .carousel-caption h5 {
+      font-size: 45px; /* Ajuste la taille du titre sur tablette */
+  }
+
+  .carousel-caption p {
+      font-size: 1.2rem; /* Ajuste la taille du texte sur tablette */
+  }
+
+  .carousel-inner {
+      height: 500px; /* Ajuste la hauteur sur tablette */
+  }
+}
+
+/* Bureau (à partir de 1024px) */
+@media (min-width: 1024px) {
+  .search-bar {
+      width: 50%; /* Largeur de la barre de recherche pour grand écran */
+  }
+
+  .carousel-caption h5 {
+      font-size: 60px; /* Grande taille du titre sur bureau */
+  }
+
+  .carousel-caption p {
+      font-size: 1.5rem; /* Taille du texte sur bureau */
+  }
+
+  .carousel-buttons .btn {
+      padding: 12px 20px; /* Ajuste la taille des boutons */
+  }
+}
