@@ -1,170 +1,143 @@
 /* Main container for the accommodations section */
 .destination-accommodations {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    height:200px;
-  }
-  
-  /* Title styling */
-  .accommodations-title {
-    font-size: 28px;
-    color: #4a007e;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  /* Accommodations list */
-  .accommodations-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* Space between cards */
-  }
-  
-  /* Individual accommodation card */
+  padding: 40px 20px;
+  max-width: 1450px;
+  margin: 0 auto;
+  background-color: #ffffff; 
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+
+}
+
+/* Title styling */
+.accommodations-title {
+  font-size: 32px;
+  color: #4a007e; /* Deep purple for emphasis */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase; /* Stand-out styling */
+  letter-spacing: 1.5px;
+}
+
+/* Accommodations list */
+.accommodations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between cards */
+}
+
+/* Individual accommodation card */
+.accommodation-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 500px;
+}
+
+.accommodation-card:hover {
+  transform: translateY(-8px); /* Subtle lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Images container with overlapping effect */
+.staggered-images {
+  position: relative;
+  width: 320px; /* Adjust width as needed */
+  height: 250px; /* Adjust height as needed */
+  margin-right: 20px; /* Space between images and text */
+}
+
+/* Each individual image */
+.staggered-images img {
+  position: absolute;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+/* Positions and sizes for the staggered images */
+.image1 {
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  z-index: 3; /* Top layer */
+}
+
+.image2 {
+  top: 20px;
+  left: 30px;
+  width: 180px;
+  height: 180px;
+  z-index: 2; /* Middle layer */
+}
+
+.image3 {
+  top: 40px;
+  left: 60px;
+  width: 200px;
+  height: 200px;
+  z-index: 1; /* Bottom layer */
+}
+
+/* Hover effect to bring image forward */
+.staggered-images img:hover {
+  transform: scale(1.1); /* Slight zoom */
+  z-index: 5; /* Bring to front on hover */
+}
+
+/* Accommodation details container */
+.accommodation-details {
+  flex: 1;
+  text-align: left;
+}
+
+.accommodation-name {
+  font-size: 24px;
+  color: #d4af37; /* Gold for prominence */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.accommodation-description {
+  font-size: 16px;
+  color: #555; /* Neutral color for readability */
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
   .accommodation-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    overflow: hidden;
-  }
-  
-  /* Images container with overlapping effect */
-  .staggered-images {
-    position: relative;
-    width: 320px; /* Adjust width as needed */
-    height: 250px; /* Adjust height as needed */
-  }
-  
-  /* Each individual image */
-  .image {
-    position: absolute;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Positions and sizes for the staggered images */
-  .image1 {
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 180px;
-    z-index: 3; /* Top layer */
-  }
-  
-  .image2 {
-    top: 20px;
-    left: 30px;
-    width: 200px;
-    height: 200px;
-    z-index: 2; /* Middle layer */
-  }
-  
-  .image3 {
-    top: 40px;
-    left: 60px;
-    width: 220px;
-    height: 220px;
-    z-index: 1; /* Bottom layer */
-  }
-  
-  /* Hover effect to bring image forward */
-  .image:hover {
-    transform: scale(1.05);
-    z-index: 5; /* Bring to front on hover */
-  }
-  
-  /* Accommodation details container */
-  .accommodation-details {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .accommodation-name {
-    font-size: 22px;
-    color: #d4af37; /* Gold color */
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .accommodation-description {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 768px) {
-    .accommodation-card {
       flex-direction: column;
       text-align: center;
-    }
-  
-   /* Main container for images */
-.staggered-images {
-    position: relative;
-    width: 300px; /* Adjust width for container */
-    height: 220px; /* Adjust height for container */
-    margin: 0 auto;
   }
-  
-  /* First image */
-  .image1 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 160px;
-    height: 160px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 3;
-    transition: transform 0.3s ease;
+
+  .staggered-images {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Adjust height */
+      margin: 0 auto 20px; /* Center align images */
   }
-  
-  /* Second image */
-  .image2 {
-    position: absolute;
-    top: 0px;
-    left: 90px;
-    width: 180px;
-    height: 180px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-    transition: transform 0.3s ease;
+
+  .staggered-images img {
+      position: static; /* Remove absolute positioning */
+      margin-bottom: 10px;
   }
-  
-  /* Third image */
-  .image3 {
-    position: absolute;
-    top: 30px;
-    left: 50px;
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transition: transform 0.3s ease;
+
+  .accommodation-name {
+      font-size: 20px;
   }
-  
-  /* Hover effect for images */
-  .image1:hover,
-  .image2:hover,
-  .image3:hover {
-    transform: scale(1.05);
-    z-index: 5;
+
+  .accommodation-description {
+      font-size: 14px;
   }
-  
-  }
-  
+}

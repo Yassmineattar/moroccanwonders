@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react';
 import DestinationGeneral from "./components/destinations/DestinationGeneral";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
@@ -13,6 +14,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
+  const [favorites, setFavorites] = useState([]); // Manage favorite destinations globally
+  const [favoriteHotels, setFavoriteHotels] = useState([]); // Manage favorite hotels globally
   return (
     <Router>
       {/* Navbar */}
@@ -25,8 +28,31 @@ function App() {
         <Route path="/destination/:destination" element={<DestinationPage />} />
         <Route path="/can2025" element={<CAN />} />
         <Route path="/store" element={<Store />} />
-        <Route path="/destinations/destinationGeneral" element={<DestinationGeneral />} />
-        <Route path="/favorites" element={<Favorites />} />
+
+        {/* Pass favorites and setFavorites to DestinationGeneral */}
+        
+        <Route
+                    path="/destinations/destinationGeneral"
+                    element={
+                        <DestinationGeneral
+                            favorites={favorites}
+                            setFavorites={setFavorites}
+                            favoriteHotels={favoriteHotels}
+                            setFavoriteHotels={setFavoriteHotels}
+                        />
+                    }
+        />
+
+        {/* Pass both favorites and favoriteHotels to Favorites */}
+        <Route
+                    path="/favorites"
+                    element={
+                        <Favorites
+                            favorites={favorites}
+                            favoriteHotels={favoriteHotels}
+                        />
+                    }
+        />
       </Routes>
 
       {/* Footer */}

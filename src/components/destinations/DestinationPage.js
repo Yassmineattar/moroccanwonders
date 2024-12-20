@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import DestinationHeader from "./DestinationHeader";
-//import DestinationMap from "./DestinationMap";
+import DestinationMap from "./DestinationMap";
 import DestinationActivities from "./DestinationActivities";
 import DestinationAccommodations from "./DestinationAccommodations";
 import "./DestinationPage.css";
+import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
 
 const DestinationPage = () => {
@@ -41,18 +42,26 @@ const DestinationPage = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
+    
     <div className="destination-page">
       <Navbar/>
       <DestinationHeader
         title={`Welcome to ${destinationData.destination}`}
         bannerImage={destinationData.bannerImage}
       />
+      
+      {/* Other sections */}
+      <DestinationMap destination={destination} />
+
+    
       <DestinationActivities activities={destinationData.activities} />
       <DestinationAccommodations accommodations={destinationData.accommodations} />
     {/*<DestinationMap mapPoints={destinationData.mapPoints} />
       <DestinationActivities activities={destinationData.activities} />
-  <DestinationAccommodations accommodations={destinationData.accommodations} />*/}
+     />*/}
+    <Footer/>
     </div>
+    
   );
 };
 

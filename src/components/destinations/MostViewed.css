@@ -1,37 +1,84 @@
 /* Most Viewed Section */
 .most-viewed {
-    padding: 30px 20px;
-    background-color: #fff;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Softer background color for better contrast */
     text-align: center;
 }
 
-.most-viewed h2 {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
+.most-viewed .centered-title {
+    font-size: 36px;
+    color: #222; /* Darker color for emphasis */
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase; /* Standout styling */
+    letter-spacing: 1.5px;
 }
 
+/* Most Viewed List */
 .most-viewed ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center; /* Center-align items */
 }
 
+/* Individual List Item */
 .most-viewed li {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-}
-
-.most-viewed li strong {
-    color: #007bff;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure consistent width */
+    max-width: 300px; /* Cap max width for items */
 }
 
 .most-viewed li:hover {
-    background-color: #f0f8ff;
+    transform: translateY(-10px); /* Subtle lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    background-color: #f0f8ff; /* Highlight background on hover */
+}
+
+.most-viewed li strong {
+    display: block;
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.most-viewed li span {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .most-viewed .centered-title {
+        font-size: 28px;
+    }
+
+    .most-viewed ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .most-viewed li {
+        padding: 15px;
+    }
+
+    .most-viewed li strong {
+        font-size: 16px;
+    }
+
+    .most-viewed li span {
+        font-size: 14px;
+    }
 }

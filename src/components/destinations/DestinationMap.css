@@ -1,19 +1,22 @@
 .destination-map {
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .map-points {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .map-point {
-    background: #003580;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-title {
+  font-size: 28px;
+  color: #4a007e;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.leaflet-container {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
