@@ -10,12 +10,8 @@ function Carousel() {
   };
 
   return (
-    <div>
-      {/* Barre de recherche */}
-      <div className="search-bar">
-      <input type="text" placeholder="Search for city, place, product, event" />
-      <i class="fas fa-search"></i> 
-      </div>
+    <div >
+      
 
       <div
         id="carouselExampleIndicators"
@@ -23,6 +19,12 @@ function Carousel() {
         data-bs-ride="carousel"
         onSlide={(e) => handleSlideChange(e.to)} // Détecter le changement de slide
       >
+        {/* Barre de recherche */}
+      <div className="search-bar">
+      <input type="text" placeholder="Search for city, place, product, event" />
+      <i className="fas fa-search"></i> 
+      </div>
+
         <div className="carousel-indicators">
           <button
             type="button"

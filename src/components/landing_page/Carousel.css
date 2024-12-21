@@ -7,6 +7,7 @@
     outline: none;
 }
 
+
 /* Supprimer le changement de couleur au survol */
 .carousel-control-prev,
 .carousel-control-next {
@@ -101,7 +102,7 @@
 /* Barre de recherche */
 .search-bar {
   position: absolute;
-  top: 10%; /* Positionne la barre légèrement plus bas */
+  top: 20%; /* Positionne la barre légèrement plus bas */
   left: 50%;
   transform: translateX(-50%);
   /*background-color: rgba(255, 255, 255, 0.7);*/
@@ -268,7 +269,7 @@ input[type="text"]::placeholder {
   /* Ajustements pour la barre de recherche */
   .search-bar {
       width: 70%; /* Réduit la largeur */
-      top: 8%;
+      top: 90px;
       padding: 10px;
       height: 30px;
       color: #fff;
@@ -287,7 +288,8 @@ input[type="text"]::placeholder {
     font-size: 15px;
     color: #ffffff;
     z-index: 3; /* Assurez-vous que l'icône est au-dessus de l'input */
-    top: 6px;
+  
+    
   }
 
 
@@ -322,6 +324,8 @@ input[type="text"]::placeholder {
 @media (min-width: 768px) and (max-width: 1024px) {
   .search-bar {
       width: 50%; /* Largeur plus petite */
+      margin-top: 15px;
+      
   }
 
   .carousel-caption {

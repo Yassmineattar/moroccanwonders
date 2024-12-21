@@ -3,11 +3,11 @@
   justify-content: space-between; /* Espacement équilibré entre le texte et les images */
   align-items: center;
   padding: 20px; /* Réduire les espaces blancs avec 5% de marge à gauche et à droite */
-  background-color: #fff;
+  background-color: #ffffff;
   height: 600px;
 }
 
-.container {
+.container1 {
   display: flex;
   max-width: 1800px;
   width: 100%;
@@ -95,7 +95,7 @@
   margin-bottom: 20px;
 }
 
-.container {
+.container1 {
   flex-direction: column;
   width: 100%;
 }

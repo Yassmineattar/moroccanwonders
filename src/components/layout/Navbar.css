@@ -1,118 +1,209 @@
-/* Navbar initial (transparent) */
 .navbar {
-  background-color: #0136a4;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1030;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  padding: 10px 20px;
+  max-width: 100%; /* Full width */
+  padding: 12px 20px; /* Adjust padding for inner content */
+  display: flex;
+  justify-content: space-between; /* Separate logo and links */
+  align-items: center;
+  background-color: rgba(19, 25, 95, 0.9); /* Navbar background with transparency */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
-/* Navbar scrolled */
-.navbar.scrolled {
-  background-color: #0136a4; /* Change background color */
+
+/* Inner Container */
+.container {
+  max-width: 100%; /* Full width */
+  padding: 12px 20px; /* Adjust padding for inner content */
+  display: flex;
+  justify-content: space-between; /* Separate logo and links */
+  align-items: center;
+  background-color: rgba(19, 25, 95, 0.9); /* Navbar background with transparency */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  border-radius: 20px;
 }
 
-/* Navbar brand (logo/text) */
+/* Brand Name */
 .navbar-brand {
-  color: white;
-  font-size: 1.8rem;
+  
+  font-size: 1.5rem;
   font-weight: bold;
-  text-transform: uppercase;
-}
-.navbar-brand:hover {
-  color: #8C431D;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 0px;
+  
+
 }
 
-/* Links styles */
-.navbar-nav .nav-link {
-  color: white;
+/* Navigation Menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ensure spacing between items */
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* Use gap for consistent spacing */
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
   font-size: 1rem;
-  margin: 0 10px;
-  text-transform: capitalize;
   transition: color 0.3s ease;
+  color: #ffffff;
+  padding: 10px;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffcc00;
+.nav-link:hover {
+  color: #4a90e2;
 }
 
-/* Icons styles */
-.navbar-nav .icon {
-  font-size: 1.2rem;
-  color: white;
-  margin-right: 5px;
-  transition: color 0.3s ease;
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
 }
 
-.navbar-nav .icon:hover {
-  color: #ffcc00;
-}
-
-/* Dropdown menu */
 .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.8);
-  border: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px 0;
+  display: none;
+  z-index: 1000;
 }
 
-.dropdown-menu .dropdown-item {
-  color: white;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: #ffcc00;
+.dropdown-item {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #181515;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #4a90e2;
+}
+
+/* Icons */
+.navbar-icons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   
 }
 
-/* Responsive navbar */
+.navbar-icons li {
+  margin-left: 20px;
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #4a90e2;
+}
+
+/* Mobile View */
 .navbar-toggler {
+  display: none;
+  background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .navbar-toggler-icon {
-  background-color: white;
-  border-radius: 3px;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  display: block;
+  position: relative;
 }
 
-/* Ajuster la visibilité et l'alignement sur mobile */
-@media (max-width: 767px) {
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -6px;
+}
+
+.navbar-toggler-icon::after {
+  top: 6px;
+}
+
+/* Collapse menu for Mobile */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    color: #333;
+  }
+
+  .navbar-icons {
+    margin-top: 10px;
+    justify-content: flex-start;
+    color: #333;
+  }
+
   .navbar-toggler {
-    position: absolute; 
-    right: 10px;
-    top: 5px;
+    display: block;
   }
-
-  .navbar-collapse {
-    position: fixed;
-    top: 0;
-    right: 0; 
-    width: 60%; /* Ajuste la largeur du menu déroulant */
-    background-color: #0136a4; /* Fond bleu */
-    padding-top: 20px; /* Espacement pour éviter le chevauchement avec la barre supérieure */
-    display: flex;
-    flex-direction: column; /* Empile les éléments du menu verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
-    justify-content: flex-start; /* Aligner les éléments du menu vers le haut */
+  .icon {
+    
+    color:#333;
   }
-
-  .navbar-nav {
-    width: 100%; /* Les éléments prennent toute la largeur du menu */
-    display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
-  }
-
-  .navbar-nav .nav-link {
-    text-align: center; /* Centre le texte dans chaque lien */
-    padding: 15px 0; 
-    width: 100%; 
-    color: white;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-
-  .navbar-nav .nav-link:hover {
-    background-color: #8C431D; /* Fond au survol */
-  }
+  
 }

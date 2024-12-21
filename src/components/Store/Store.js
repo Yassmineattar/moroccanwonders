@@ -1,7 +1,16 @@
 import React from "react";
+import Navbar from "../layout/Navbar";
 
 const Store = () => {
-  return <h1>Traditional Moroccan Store</h1>;
+  return (
+    <>
+    <Navbar/>
+    <h1>ccccccccccccc</h1>
+    </>
+  
+  )
+ 
+   
 };
 
 export default Store;

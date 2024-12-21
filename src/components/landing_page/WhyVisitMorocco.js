@@ -19,7 +19,7 @@ const WhyVisitMorocco = () => {
 
   return (
     <section className="why-visit-morocco">
-      <div className="container">
+      <div className="container1">
         {/* Texte à gauche */}
         <div className="text-content">
           <h2 className="section-title">Why Visit Morocco?</h2>

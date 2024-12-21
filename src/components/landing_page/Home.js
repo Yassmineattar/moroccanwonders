@@ -9,13 +9,17 @@ import PlanYourTrip from "./PlanYourTrip";
 const Home = () => {
   return (
     <div>
-
+      
       {/* Hero Section: Carousel */}
       <main>
         <Carousel />
       </main>
 
       {/* Sections */}
+      
+        
+
+      
         <WhyVisitMorocco />
 
         <BiggestEvent />
@@ -25,6 +29,7 @@ const Home = () => {
         <TraditionalStore />
 
         <PlanYourTrip />
+    
 
     </div>
   );
