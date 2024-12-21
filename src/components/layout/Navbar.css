@@ -3,8 +3,7 @@
   padding: 12px 20px; /* Adjust padding for inner content */
   display: flex;
   justify-content: space-between; /* Separate logo and links */
-  align-items: center;
-  background-color: rgba(19, 25, 95, 0.9); /* Navbar background with transparency */
+  align-items: center; /* Navbar background with transparency */
 }
 
 
@@ -124,52 +123,40 @@
 
 /* Mobile View */
 .navbar-toggler {
+  outline: none!important;
   display: none;
-  background-color: transparent;
-  border: none;
+  background: none!important;
+  border: none!important;
   cursor: pointer;
+  font-size: 1.8rem; /* Taille de l'icône */
+  color: #ffffff; /* Couleur par défaut */
+  transition: color 0.3s ease;
+}
+.navbar-toggler:hover {
+  color: #d4a72c; /* Couleur au survol */
+}
+.navbar-toggler:focus {
+  outline: none!important; /* Supprimer le contour lors du focus */
+  border: none!important; /* Supprimer la bordure éventuelle */
+}
+.menu-icon {
+  font-size: 1.5rem;
 }
 
-.navbar-toggler-icon {
-  width: 24px;
-  height: 2px;
-  background-color: #333;
-  display: block;
-  position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  width: 24px;
-  height: 2px;
-  background-color: #333;
-  position: absolute;
-  left: 0;
-}
-
-.navbar-toggler-icon::before {
-  top: -6px;
-}
-
-.navbar-toggler-icon::after {
-  top: 6px;
-}
-
-/* Collapse menu for Mobile */
 @media (max-width: 768px) {
   .navbar-menu {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: rgba(19, 25, 95, 0.9);
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 8px 8px;
+    left:400px;
+    width: 28%;
+    margin-right: 10px;
+    border-radius: 10px;
     padding: 20px;
+    z-index: 1000;
   }
 
   .navbar-menu.show {
@@ -179,32 +166,21 @@
   .navbar-links {
     flex-direction: column;
     width: 100%;
-  }
-
-  .navbar-links li {
-    margin-right: 0;
-    margin-bottom: 10px;
+    gap: 10px; /* Add spacing for mobile links */
   }
 
   .nav-link {
     width: 100%;
     text-align: left;
     padding: 10px 0;
-    color: #333;
   }
 
-  .navbar-icons {
-    margin-top: 10px;
-    justify-content: flex-start;
-    color: #333;
+
+  .icon {
+    color: #ffffff;
   }
 
   .navbar-toggler {
     display: block;
   }
-  .icon {
-    
-    color:#333;
-  }
-  
 }

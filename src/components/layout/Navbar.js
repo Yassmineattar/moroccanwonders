@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaUser, FaHeart } from "react-icons/fa";
+import { FaUser, FaHeart, FaBars, FaTimes  } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
@@ -18,9 +18,9 @@ function Navbar() {
           MoroccoWonders
         </Link>
 
-        {/* Toggler */}
+        {/* Bouton Hamburger avec react-icons */}
         <button className="navbar-toggler" onClick={toggleMenu}>
-          <span className="navbar-toggler-icon"></span>
+          {isMenuOpen ? <FaTimes className="menu-icon" /> : <FaBars className="menu-icon" />}
         </button>
 
         {/* Navbar Menu */}
