@@ -37,11 +37,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Services</h3>
           <ul>
-            <li>About Us</li>
-            <li>Blog & Articles</li>
-            <li>Term and Condition</li>
-            <li>Privacy Policy</li>
-            <li>Contact Us</li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Blog & Articles</a></li>
+            <li><a href="">Terms and Condition</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Contact Us</a></li>
           </ul>
         </div>
         <div className="footer-section">

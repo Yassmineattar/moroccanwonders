@@ -42,7 +42,8 @@
     color: white; 
   }
   .footer-section ul li a:hover {
-    text-decoration: underline
+    
+    color: #d4a72c;
   }
   .footer-icons {
     margin-top: 1rem;
